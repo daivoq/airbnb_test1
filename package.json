@@ -81,5 +81,6 @@
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
   },
-  "main": "index.js"
+  "main": "index.js",
+  "repository": "https://github.com/daivoq/airbnb_test1.git"
 }
