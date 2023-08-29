@@ -96,7 +96,7 @@ export class NguoidungService {
     const isTokenValid = this.tokenService.validateToken(token);
     if (isTokenValid) {
       const decode = this.tokenService.decodeToken(token);
-      try {
+
         const vitri = 'avatar';
         const idString = decode.data.ma_nguoi_dung.toString();
         const avatar = await uploadService(file, vitri, idString);
@@ -110,9 +110,7 @@ export class NguoidungService {
           },
         });
         return 'Tải lên thành công';
-      } catch (error) {
-        return 'Tải lên thất bại';
-      }
+
     } else {
       return 'Token không hợp lệ hoặc hết hạn';
     }

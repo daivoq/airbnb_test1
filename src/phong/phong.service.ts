@@ -125,7 +125,7 @@ export class PhongService {
       if (decode.data.role !== 'admin') {
         return 'Bạn không có quyền';
       } else {
-        try {
+
           const vitri = 'phong';
           const idString = id.toString();
           const hinh_anh = await uploadService(file, vitri, idString);
@@ -151,9 +151,7 @@ export class PhongService {
           } else {
             return 'không tồn tại';
           }
-        } catch (error) {
-          return 'Tải lên thất bại';
-        }
+
       }
     } else {
       return 'Token không đúng hoặc hết hạn';
