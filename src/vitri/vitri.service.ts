@@ -96,7 +96,7 @@ export class VitriService {
       if (decode.data.role !== 'admin') {
         return 'Bạn không có quyền';
       } else {
-        // try{
+        try{
           const vitri = 'vitri';
           const idString = id.toString();
           const hinh_anh = await uploadService(file, vitri, idString);
@@ -113,9 +113,9 @@ export class VitriService {
 
           return 'Tải lên thành công';
         }
-        // catch{
-        //   return 'Tải lên thất bại'
-        // }
+        catch{
+          return 'Tải lên thất bại'
+        }
       }
     } else {
       return 'Token không đúng hoặc hết hạn';
